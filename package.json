@@ -1,0 +1,22 @@
+{
+  "name": "daec-actividad-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dataSources.js",
+  "scripts": {
+    "start": "lite-server -c http-server-config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarnaizgarcia/daec-actividad-3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarnaizgarcia/daec-actividad-3/issues"
+  },
+  "homepage": "https://github.com/sarnaizgarcia/daec-actividad-3#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

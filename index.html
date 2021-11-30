@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="validators.js"></script>
+    <script src="dataSources.js"></script>
+    <script src="entities.js"></script>
+    <title>Pedido de pizza</title>
+</head>
+<body>
+    <header class="pizza-header">
+        <div class="header-section logo">
+            <img class="pizza-logo" src="resources/logo.png" alt="pizza-delivery" />
+        </div>
+        <div class="header-section title">
+            Command your pizza
+        </div>
+    </header>
+    <form class="pizza-form">
+        <div class="text-field-set" id="field-name">
+            <label for="name" class="text-label">Name and Surname*</label>
+            <input type="text" class="text-field error" name="name" id="name">
+            <span class="text-error"></span>
+        </div>
+        <div class="text-field-set" id="field-address">
+            <label for="adress" class="text-label">Address*</label>
+            <input type="text" class="text-field error" name="address" id="address">
+            <span class="text-error"></span>
+        </div>
+        <div class="text-field-set" id="field-phone">
+            <label for="phone" class="text-label">Phone*</label>
+            <input type="text" class="text-field error" name="phone" id="phone" placeholder="Phone example: 655 253 789">
+            <span class="text-error"></span>
+        </div>
+        <div class="text-field-set" id="field-email">
+            <label for="email" class="text-label">Email*</label>
+            <input type="text" class="text-field error" name="email" id="email" placeholder="Email example: domain@mail.com">
+            <span class="text-error"></span>
+        </div>
+        <div class="options-sets">
+            <div class="option-field-set" id="field-pizza-size">
+                <div class="field-header">
+                    <div class="field-set-title">Pizza size*</div>
+                    <button type="button" class="btn primary small">
+                        <span class="material-icons material-icons-outlined">sync</span>
+                    </button>
+                </div>
+                <div class="loading">
+                    Loading...
+                </div>
+            </div>
+            <div class="option-field-set" id="field-pizza-ingredients">
+                <div class="field-header">
+                    <div class="field-set-title">Pizza ingredients*</div>
+                    <button type="button" class="btn primary small">
+                        <span class="material-icons material-icons-outlined">sync</span>
+                    </button>
+                </div>
+                <div class="loading">
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <div class="buttons-set">
+            <button type="reset" class="btn secondary">Reset</button>
+            <button type="submit" disabled class="btn primary">Create command</button>
+        </div>
+    </form>
+    <div class="modal bill" tabindex="0">
+        <div class="bill-set">
+            <div class="bill-label">Bill:</div>
+            <div class="bill-details">
+                <div class="loading">
+                    Loading...
+                </div>
+            </div>
+        </div>
+        <div class="buttons-set">
+            <button type="reset" class="btn secondary">I've change my mind</button>
+            <button type="submit" class="btn primary">Go on</button>
+        </div>
+    </div>
+    <div class="modal error" tabindex="0">
+        <h3 class="error-title">Data Error</h3>
+        <div class="error-message">
+            It has been a problem with the server data. <br/>Please try again after 5 minutes
+        </div>
+        <div class="buttons-set error">
+            <button type="button" class="btn primary">Try again</button>
+        </div>
+    </div>
+    <script src="validarFormulario.js"></script>
+</body>
+</html>
