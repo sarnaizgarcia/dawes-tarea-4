@@ -93,6 +93,12 @@ function renderBill(formData, pizzaSizesData, ingredientsData) {
 
 }
 
+/**
+ * 
+ * @param {*} jqueryElement 
+ * @param {*} type 
+ * @param {*} value 
+ */
 function createOptionField(jqueryElement, type, value) {
     const optionField = $('<div>')
         .addClass('option-field')
@@ -111,6 +117,10 @@ function createOptionField(jqueryElement, type, value) {
         .appendTo(optionField);
 }
 
+/**
+ * 
+ * @param {*} data 
+ */
 function createPizzaSizeOptions(data) {
     const pizzaSizeOptions = $('#field-pizza-size');
     $('#field-pizza-size .loading').remove();
@@ -123,6 +133,10 @@ function createPizzaSizeOptions(data) {
         .appendTo(pizzaSizeOptions);
 }
 
+/**
+ * 
+ * @param {*} data 
+ */
 function createIngredientsOptions(data) {
     const ingredientsOptions =$('#field-pizza-ingredients');
     $('#field-pizza-ingredients .loading').remove();
@@ -135,6 +149,10 @@ function createIngredientsOptions(data) {
         .appendTo(ingredientsOptions);
 }
 
+/**
+ * 
+ * @param {*} error 
+ */
 function openErrorMessage(error) {
     const modalError = $('.modal.error');
     console.error(error);
@@ -145,12 +163,19 @@ function openErrorMessage(error) {
     }, 1000);
 }
 
+/**
+ * 
+ */
 function requestListPizzaSizes() {
     getEntityPizzaSizes()
     .then(createPizzaSizeOptions)
     .catch(openErrorMessage);
 }
 
+
+/**
+ * 
+ */
 function requestListIngredients() {
     getEntityIngredients()
     .then(createIngredientsOptions)
